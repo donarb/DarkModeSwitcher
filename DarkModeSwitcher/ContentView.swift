@@ -104,10 +104,11 @@ struct AppRowView: View {
                     )
             }
 
-            SegmentedControl(selection: $app.modeSwitchSetting) {
+            Picker("", selection: $app.modeSwitchSetting) {
                 Text("Auto").tag(AppModel.ModeSwitchSetting.auto)
                 Text("Light").tag(AppModel.ModeSwitchSetting.light)
             }
+            .pickerStyle(SegmentedPickerStyle())
             .disabled(app.bundleIdentifier == nil)
             .frame(width: 200)
         }
