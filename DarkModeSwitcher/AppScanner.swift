@@ -12,7 +12,7 @@ import Foundation
 class AppScanner {
 
     var applicationFolders: [URL] {
-        return FileManager.default.urls(for: .applicationDirectory, in: .allDomainsMask)
+        return FileManager.default.urls(for: .applicationDirectory, in: .localDomainMask)
             + [URL(fileURLWithPath: "/System/Applications")]
     }
 
