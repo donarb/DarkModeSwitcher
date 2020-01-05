@@ -1,5 +1,12 @@
 # Dark Mode Switcher
 
+## Update - Jan 4, 2020
+
+I updated the project to work with Xcode 11.3.
+
+
+-
+
 This is a demo app I've built as an experiment in using SwiftUI with AppKit, as described in this blog post: <https://mackuba.eu/2019/06/17/swiftui-appkit-dark-mode-switcher/>.
 
 The app lets you force any other app to use a light mode when the whole desktop uses a dark mode. Unfortunately there doesn't seem to be any way now to do the opposite (use dark mode only in specific apps).
