@@ -26,8 +26,10 @@ struct ContentView: View {
 
             Divider()
 
-            List(matchingApps.identified(by: \.bundleURL)) { app in
-                AppRowView(app: app)
+            List {
+                ForEach(matchingApps, id: \.bundleURL) { app in
+                    AppRowView(app: app)
+                }
             }
         }
     }
