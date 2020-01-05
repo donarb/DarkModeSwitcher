@@ -73,7 +73,7 @@ struct MissingAppIcon: View {
             .padding(.all, 2)
             .frame(width: iconSize, height: iconSize)
             .opacity(0.5)
-            .overlay(Text("?").color(.white).opacity(0.8))
+            .overlay(Text("?").foregroundColor(.white).opacity(0.8))
     }
 }
 
