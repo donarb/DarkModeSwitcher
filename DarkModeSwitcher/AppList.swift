@@ -12,7 +12,7 @@ import SwiftUI
 
 typealias Signal = PassthroughSubject<Void, Never>
 
-class AppList: BindableObject {
+class AppList: ObservableObject {
     let didChange = Signal()
 
     var runningAppsObservation: NSKeyValueObservation?

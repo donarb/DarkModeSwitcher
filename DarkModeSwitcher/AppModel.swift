@@ -9,7 +9,7 @@
 import Cocoa
 import SwiftUI
 
-class AppModel: BindableObject, CustomStringConvertible {
+class AppModel: ObservableObject, CustomStringConvertible {
     enum ModeSwitchSetting {
         case auto
         case light

@@ -11,7 +11,7 @@ import SwiftUI
 private let iconSize: CGFloat = 32
 
 struct ContentView: View {
-    @ObjectBinding var appList: AppList
+    @ObservedObject var appList: AppList
     @State var query: String = ""
 
     var body: some View {
@@ -76,7 +76,7 @@ struct MissingAppIcon: View {
 }
 
 struct AppRowView: View {
-    @ObjectBinding var app: AppModel
+    @ObservedObject var app: AppModel
 
     var body: some View {
         HStack {
