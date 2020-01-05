@@ -57,7 +57,7 @@ struct SearchBar: View {
                     .opacity(query.count == 0 ? 0.5 : 1.0)
             }
             .disabled(query.count == 0)
-            .padding(.trailing, 8)
+            .padding(.trailing, CGFloat(8))
         }
     }
 
