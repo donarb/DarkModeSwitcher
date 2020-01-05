@@ -48,9 +48,9 @@ struct SearchBar: View {
 
             Text("🔍")
 
-            TextField($query, placeholder: Text("Search"))
-                .textFieldStyle(.roundedBorder)
-                .padding(8)
+            TextField("Search", text: $query)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding(CGFloat(8))
 
             Button(action: clearQuery) {
                 Image(nsImage: clearIcon)
