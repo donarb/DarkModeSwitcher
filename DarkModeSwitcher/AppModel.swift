@@ -15,34 +15,32 @@ class AppModel: ObservableObject, CustomStringConvertible {
         case light
     }
 
-    let didChange = Signal()
-
     let name: String
     let bundleURL: URL
     var icon: NSImage?
     var bundleIdentifier: String?
 
     var requiresLightMode: Bool = false {
-        didSet {
-            if requiresLightMode != oldValue {
+        willSet {
+            if requiresLightMode != newValue {
                 needsRestart = isRunning
             }
         }
     }
 
     var needsRestart: Bool = false {
-        didSet {
-            didChange.send(())
+        willSet {
+            objectWillChange.send()
         }
     }
 
     var isRunning: Bool = false {
-        didSet {
+        willSet {
+            objectWillChange.send()
+            
             if !isRunning {
                 needsRestart = false
             }
-
-            didChange.send(())
         }
     }
 

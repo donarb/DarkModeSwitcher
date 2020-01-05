@@ -10,16 +10,13 @@ import Combine
 import Foundation
 import SwiftUI
 
-typealias Signal = PassthroughSubject<Void, Never>
-
 class AppList: ObservableObject {
-    let didChange = Signal()
 
     var runningAppsObservation: NSKeyValueObservation?
 
     var apps: [AppModel] = [] {
-        didSet {
-            didChange.send(())
+        willSet {
+            objectWillChange.send()
         }
     }
 

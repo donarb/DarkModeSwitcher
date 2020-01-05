@@ -83,7 +83,7 @@ class AppScanner {
 
                 print("Updated app info: \(app)")
 
-                app.didChange.send(())
+                app.objectWillChange.send()
             }
         } catch let error {
             print("Could not load app info for \(app.name): \(error)")
